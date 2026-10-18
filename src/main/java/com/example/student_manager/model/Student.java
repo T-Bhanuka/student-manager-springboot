@@ -1,4 +1,4 @@
-package com.example.studentmanager.model; 
+package com.example.student_manager.model; 
   
 import jakarta.persistence.Column; 
 import jakarta.persistence.Entity; 
@@ -25,7 +25,7 @@ public class Student {
     @NotBlank(message = "Full name is required") 
     @Size(max = 100, message = "Name must be at most 100 characters") 
     private String fullName; 
-  
+
     @NotBlank(message = "Email is required") 
     @Email(message = "Enter a valid email address") 
     @Column(unique = true) 
@@ -62,3 +62,4 @@ public class Student {
   
     public Integer getAge() { return age; } 
     public void setAge(Integer age) { this.age = age; } 
+  }
